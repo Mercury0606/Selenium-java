@@ -16,12 +16,11 @@ public class End2end {
         driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();// To select the current date
 
         //To check return date if Enabled
-        if (driver.findElement(By.id("Div1")).getAttribute("style").contains("1")){         //style=0.5 means disabled style=1 means abled
+        if (driver.findElement(By.id("Div1")).getAttribute("style").contains("1")) {         //style=0.5 means disabled style=1 means abled
             System.out.println("Return date is enabled");
             Assert.assertTrue(false);
 
-        }
-        else {
+        } else {
             Assert.assertTrue(true);
         }
         driver.findElement(By.id("divpaxinfo")).click();
@@ -29,13 +28,12 @@ public class End2end {
         for (int i = 0; i < 3; i++) {
             driver.findElement(By.xpath("//*[@id=\"hrefIncAdt\"]")).click();
         }
-        System.out.println(driver.findElement(By.id("spanAudlt")).getText()+"Adult");        //Assert.assertEquals(actual,expected),if equal ,test will pass
-        Assert.assertEquals(driver.findElement(By.id("spanAudlt")).getText()+"Adult", "4Adult");
+        System.out.println(driver.findElement(By.id("spanAudlt")).getText() + "Adult");        //Assert.assertEquals(actual,expected),if equal ,test will pass
+        Assert.assertEquals(driver.findElement(By.id("spanAudlt")).getText() + "Adult", "4Adult");
 
         driver.findElement(By.id("btnclosepaxoption")).click();
         driver.findElement(By.id("ctl00_mainContent_chk_friendsandfamily")).click();
         driver.findElement(By.id("ctl00_mainContent_btn_FindFlights")).click();
-
 
 
     }

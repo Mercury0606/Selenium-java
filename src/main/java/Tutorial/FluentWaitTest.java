@@ -25,7 +25,13 @@ public class FluentWaitTest {
 
             @Override
             public WebElement apply(WebDriver driver) {
-                return driver.findElement(By.cssSelector("[id='finish'] h4"));
+                System.out.println(">> Try to apply");
+                if (driver.findElement(By.cssSelector("[id='finish'] h4")).isDisplayed()){
+                    return driver.findElement(By.cssSelector("[id='finish'] h4"));
+                }
+                else {
+                    return null;
+                }
             }
         } );
     }

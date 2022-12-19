@@ -1,4 +1,4 @@
-package Tutorial;
+package Java.Synchronization_Selenium;
 
 import org.checkerframework.checker.units.qual.Time;
 import org.openqa.selenium.By;

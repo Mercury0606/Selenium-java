@@ -1,4 +1,4 @@
-package Tutorial;
+package Java.Synchronization_Selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;

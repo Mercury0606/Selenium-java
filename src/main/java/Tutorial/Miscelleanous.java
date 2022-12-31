@@ -17,7 +17,7 @@ public class Miscelleanous {
         driver.manage().deleteAllCookies();
 //        driver.manage().deleteCookieNamed("sessionKey");
         //click on any link
-            //login page: verigy login url
+            //login page: verify login url
         driver.get("http://google.com");
 
 

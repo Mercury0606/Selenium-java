@@ -44,7 +44,7 @@ public class AllEmails {
 
         System.out.println(">> Handle of this Window: " + driver.getWindowHandle());
 //        driver.switchTo().window(driver.getWindowHandle());
-            emails.ReadAll(driver);
+            emails.readAll(driver);
 
 
     }
@@ -89,7 +89,7 @@ class Emails{
     }
     public void sendEmails(WebDriver driver,Integer integer) throws InterruptedException{
 //        Thread.sleep(1000);
-        //driver.switchTo().frame("//*[@id=\\\"mailMainApp\\\"]/div[2]/div/div[1]/div/ul/li[1]/a");//switch iframe
+     //   driver.switchTo().frame("//*[@id=\\\"mailMainApp\\\"]/div[2]/div/div[1]/div/ul/li[1]/a");//switch iframe
 
         driver.findElement(By.className("sidebar_nav_item_link")).click();
         Thread.sleep(1500);
@@ -108,8 +108,8 @@ class Emails{
 
 
     }
-    @Test
-    public void ReadAll(@NotNull WebDriver driver) throws InterruptedException {
+
+    public void readAll(@NotNull WebDriver driver) throws InterruptedException {
         Thread.sleep(1000);
         driver.findElement(By.cssSelector("dt.ckbox")).click();
         driver.findElement(By.className("gb-layer")).click();

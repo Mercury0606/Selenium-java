@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="/Users/ts-chongyuan.zhong/IdeaProjects/Selenium-java">
+    <test verbose="2" preserve-order="true" name="Personal Loan">
         <classes>
             <class name="TestNG.Day01"/>
             <class name="TestNG.Day02"/>
+            <class name="TestNG.Day04"/>
+        </classes>
+    </test>
+    <test name="Car Loan">
+        <classes>
+            <class name="TestNG.Day03">
+                <methods>
+<!--                    Run every method instead of the ones in exclude tag-->
+                    <include name="monbile.*"/>
+
+                </methods>
+            </class>
+
         </classes>
     </test>
 </suite>
+
+
+
+

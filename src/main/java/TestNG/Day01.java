@@ -18,7 +18,7 @@ public class Day01 {
     public void beforeEvery(){
         System.out.println(">> I'll run before every method in day 1 class");
     }
-    @Test
+    @Test(groups = {"Smoke"})
     public  void secTest(){
         System.out.println("Bye");
     }

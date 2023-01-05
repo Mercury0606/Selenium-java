@@ -4,7 +4,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Day02 {
-    @Test
+    @Test(groups = {"Smoke"})
     public  void validT(){
         System.out.println("Day 2 Make sure ");
     }

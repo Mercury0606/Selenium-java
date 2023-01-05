@@ -26,9 +26,13 @@ public class NewWindow {
         driver.switchTo().window(parentWindow);
         WebElement name=driver.findElement(By.xpath("//input[@name='name']"));
         name.sendKeys(theFirstCourse);
+
+        //how to take partial screenshot
         File screenshot = name.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenshot, new File("/Users/ts-chongyuan.zhong/DeskTop/ChroScreenSchots/screenshotForName.png"));
-        //how to take partial screenshot
-
+        //Get Height & Width
+        System.out.println(name.getRect().getDimension().getHeight());
+        System.out.println(name.getRect().getDimension().getWidth());
+        driver.quit();
     }
 }

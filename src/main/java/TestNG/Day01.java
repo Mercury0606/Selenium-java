@@ -1,5 +1,6 @@
 package TestNG;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +14,8 @@ public class Day01 {
     @Test
     public void demo(){
         System.out.println("Hello");
+        Assert.assertTrue(false);
+
     }
     @BeforeMethod
     public void beforeEvery(){

@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <parameter name="URL" value="QAClickAcademy"></parameter>
-    <groups ></groups>
-    <test verbose="2" preserve-order="true" name="Personal Loan">
+<suite name="All Test Suite" parallel="tests" thread-count="6">
+    <listeners>
+        <listener class-name="TestNG.Listeners"/>
+    </listeners>
+
+    <parameter name="URL" value="QAClickAcademy"/>
+    <parameter name="APIKey/username" value="personalLoan.com"/>
+
+    <test verbose="2" preserve-order="true" name="Personal Loan" >
         <classes>
             <class name="TestNG.Day01"/>
             <class name="TestNG.Day02"/>
             <class name="TestNG.Day04"/>
         </classes>
     </test>
-    <test name="Car Loan">
+    <test name="Car Loan" >
+<!--        OverWrite URL under Suite folder-->
+        <parameter name="URL" value="CarLoan.com"/>
+        <parameter name="APIKey/username" value="123456"/>
+
         <classes>
             <class name="TestNG.Day03">
 
